@@ -47,6 +47,23 @@ class PaymentViewModelTests: QuickSpec {
                     }
                     expect(expected).to(equal(actual))
                 }
+                
+                it("shoudle callback failed logic in viewmodel when payment is failed because of internal server error") {
+                    let orderId = 888888
+                    let payType = PayType.balance
+                    
+                    let subModel = PaymentModel(code: .serverError, message: "系统异常")
+                    let expected = PaymentResultModel(code: "internal_server_error", message: "系统异常")
+                    var actual: PaymentResultModel?
+                    
+                    let viewmodel = PaymentViewModel()
+                    viewmodel._setSubTestModel(model: subModel)
+                    viewmodel.payWithOrderId(orderId: orderId, payType: payType) { result in
+                        actual = result
+                    } failure: { error in
+                    }
+                    expect(expected).to(equal(actual))
+                }
             }
         }
     }
