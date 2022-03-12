@@ -30,7 +30,24 @@ class PaymentNetworkingTests: QuickSpec {
                         expect(expectPath).to(equal(request.url?.path))
                         return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 200, headers: nil)
                      }
-                    ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
+                    _ = ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
+                        expect(expectedModel).to(equal(model!))
+                    } onError: { error in
+                    }
+                }
+                
+                it("shoudle get success response in happy path") {
+                    let orderId = 888888
+                    let stubData = "{\"code\": \"balance_not_enough\",\"message\": \"余额不足\"}"
+                    
+                    let expectPath = "/balance/payment/\(orderId)"
+                    let expectedModel = PaymentModel(code: .notEnough, message: "余额不足")
+                    
+                    stub(condition: isMethodPOST()) { request in
+                        expect(expectPath).to(equal(request.url?.path))
+                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 200, headers: nil)
+                     }
+                    _ = ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
                         expect(expectedModel).to(equal(model!))
                     } onError: { error in
                     }
