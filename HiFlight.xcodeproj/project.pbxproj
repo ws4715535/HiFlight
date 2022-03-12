@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5491FBE527DCA51700EB2166 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE427DCA51700EB2166 /* FlightsViewController.swift */; };
+		5491FBE727DCA53200EB2166 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE627DCA53200EB2166 /* OrderViewController.swift */; };
+		5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE827DCA54C00EB2166 /* MineViewController.swift */; };
+		5491FBEB27DCA5B700EB2166 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBEA27DCA5B700EB2166 /* FeedbackViewController.swift */; };
+		5491FBED27DCAE7600EB2166 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBEC27DCAE7600EB2166 /* FlightCell.swift */; };
+		5491FBEF27DCB00300EB2166 /* FlightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBEE27DCB00300EB2166 /* FlightDetailViewController.swift */; };
+		5491FBF127DCB3F800EB2166 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBF027DCB3F800EB2166 /* PaymentViewController.swift */; };
+		5491FBF727DCBA8500EB2166 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBF627DCBA8500EB2166 /* PaymentViewModel.swift */; };
+		5491FBF927DCBADE00EB2166 /* OrderBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */; };
+		5491FBFB27DCBE4100EB2166 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */; };
+		5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFC27DCBF9400EB2166 /* ApiClient.swift */; };
 		54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635227DA7867007ED40C /* AppDelegate.swift */; };
 		54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635427DA7867007ED40C /* SceneDelegate.swift */; };
 		54BD635727DA7867007ED40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635627DA7867007ED40C /* ViewController.swift */; };
@@ -43,6 +54,17 @@
 		1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlightTests.debug.xcconfig"; path = "Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1DFD7FA0FF8EEFBF640DF117 /* Pods_HiFlightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiFlightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C85712945AC571A3116C01 /* Pods-HiFlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight.debug.xcconfig"; path = "Target Support Files/Pods-HiFlight/Pods-HiFlight.debug.xcconfig"; sourceTree = "<group>"; };
+		5491FBE427DCA51700EB2166 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		5491FBE627DCA53200EB2166 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		5491FBE827DCA54C00EB2166 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		5491FBEA27DCA5B700EB2166 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		5491FBEC27DCAE7600EB2166 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		5491FBEE27DCB00300EB2166 /* FlightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewController.swift; sourceTree = "<group>"; };
+		5491FBF027DCB3F800EB2166 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		5491FBF627DCBA8500EB2166 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBusinessModel.swift; sourceTree = "<group>"; };
+		5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		5491FBFC27DCBF9400EB2166 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +113,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5491FBE227DCA4CA00EB2166 /* BusinessModel */ = {
+			isa = PBXGroup;
+			children = (
+				5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */,
+			);
+			path = BusinessModel;
+			sourceTree = "<group>";
+		};
+		5491FBE327DCA4D400EB2166 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		5491FBF327DCB80600EB2166 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5491FBF627DCBA8500EB2166 /* PaymentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		54BD634627DA7866007ED40C = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +195,8 @@
 		54BD638227DA78A5007ED40C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				54BD638427DA78B9007ED40C /* Networking */,
+				5491FBF327DCB80600EB2166 /* ViewModel */,
+				5491FBE227DCA4CA00EB2166 /* BusinessModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,6 +204,9 @@
 		54BD638327DA78AE007ED40C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5491FBE327DCA4D400EB2166 /* DataStore */,
+				54BD638427DA78B9007ED40C /* Networking */,
+				5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +214,7 @@
 		54BD638427DA78B9007ED40C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5491FBFC27DCBF9400EB2166 /* ApiClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,6 +222,13 @@
 		54BD638527DA78DB007ED40C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5491FBE427DCA51700EB2166 /* FlightsViewController.swift */,
+				5491FBEE27DCB00300EB2166 /* FlightDetailViewController.swift */,
+				5491FBE627DCA53200EB2166 /* OrderViewController.swift */,
+				5491FBE827DCA54C00EB2166 /* MineViewController.swift */,
+				5491FBEA27DCA5B700EB2166 /* FeedbackViewController.swift */,
+				5491FBEC27DCAE7600EB2166 /* FlightCell.swift */,
+				5491FBF027DCB3F800EB2166 /* PaymentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,7 +253,6 @@
 				1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */,
 				81BF9AA4C4A52C3174742933 /* Pods-HiFlightTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -439,9 +495,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5491FBF927DCBADE00EB2166 /* OrderBusinessModel.swift in Sources */,
 				54BD635727DA7867007ED40C /* ViewController.swift in Sources */,
+				5491FBFB27DCBE4100EB2166 /* PaymentModel.swift in Sources */,
+				5491FBED27DCAE7600EB2166 /* FlightCell.swift in Sources */,
+				5491FBEF27DCB00300EB2166 /* FlightDetailViewController.swift in Sources */,
+				5491FBE727DCA53200EB2166 /* OrderViewController.swift in Sources */,
 				54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */,
+				5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */,
+				5491FBEB27DCA5B700EB2166 /* FeedbackViewController.swift in Sources */,
+				5491FBE527DCA51700EB2166 /* FlightsViewController.swift in Sources */,
+				5491FBF127DCB3F800EB2166 /* PaymentViewController.swift in Sources */,
 				54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */,
+				5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */,
+				5491FBF727DCBA8500EB2166 /* PaymentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

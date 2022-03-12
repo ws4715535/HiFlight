@@ -7,6 +7,7 @@ target 'HiFlight' do
 
   # Pods for HiFlight
   pod 'RealmSwift', '~>10'
+  pod 'Alamofire', '~> 5.0'
 
   target 'HiFlightTests' do
     inherit! :search_paths
