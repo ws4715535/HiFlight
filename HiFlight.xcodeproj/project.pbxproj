@@ -21,6 +21,7 @@
 		5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */; };
 		5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */; };
 		5491FC0527DD025200EB2166 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0427DD025200EB2166 /* MockServer.swift */; };
+		5491FC0927DD33B900EB2166 /* PaymentNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0827DD33B900EB2166 /* PaymentNetworkingTests.swift */; };
 		54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635227DA7867007ED40C /* AppDelegate.swift */; };
 		54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635427DA7867007ED40C /* SceneDelegate.swift */; };
 		54BD635727DA7867007ED40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635627DA7867007ED40C /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModelTests.swift; sourceTree = "<group>"; };
 		5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResultModel.swift; sourceTree = "<group>"; };
 		5491FC0427DD025200EB2166 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
+		5491FC0827DD33B900EB2166 /* PaymentNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentNetworkingTests.swift; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */,
+				5491FC0827DD33B900EB2166 /* PaymentNetworkingTests.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5491FC0927DD33B900EB2166 /* PaymentNetworkingTests.swift in Sources */,
 				5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */,
 				54BD636A27DA7869007ED40C /* HiFlightTests.swift in Sources */,
 			);

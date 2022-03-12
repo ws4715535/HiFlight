@@ -12,14 +12,14 @@ import RxSwift
 struct CustomError: Error {
     let errorCode: Int
 }
-
+let baseUrl = "http://hiFlight.com/"
 class ApiClient {
     static let shared = ApiClient()
 
-    private func requestUrl<Element: Codable>(url: String, method: HTTPMethod, parameters: Dictionary<String, String>?) -> Observable<Element?> {
+    private func requestUrl<Element: Codable>(path: String, method: HTTPMethod, parameters: Dictionary<String, String>?) -> Observable<Element?> {
         let header: HTTPHeaders =  ["x-access-token": "XXXXX"]
         return Observable.create({observable -> Disposable in
-            let request = AF.request(url, method: method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: header).responseData { responseData in
+            let request = AF.request(baseUrl + path, method: method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: header).responseData { responseData in
                 switch responseData.result {
                 case .success(let data):
                     let decoder = JSONDecoder()
@@ -43,8 +43,8 @@ class ApiClient {
     }
 
     func requestPayOrder(orderId: Int, payType: String) -> Observable<PaymentModel?> {
-        let url = "http://balance/payment/\(orderId)"
+        let path = "balance/payment/\(orderId)"
         let parameters = ["payType": payType]
-        return requestUrl(url: url, method: .post, parameters: parameters)
+        return requestUrl(path: path, method: .post, parameters: parameters)
     }
 }

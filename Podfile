@@ -12,6 +12,7 @@ target 'HiFlight' do
   pod 'RxCocoa'
   pod 'NSObject+Rx'
   pod 'RxOptional'
+  pod 'OHHTTPStubs/Swift'
   target 'HiFlightTests' do
     inherit! :search_paths
     # Pods for testing

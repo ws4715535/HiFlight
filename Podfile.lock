@@ -3,6 +3,19 @@ PODS:
   - Nimble (9.2.1)
   - "NSObject+Rx (5.2.2)":
     - RxSwift (~> 6.2)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/Swift (9.1.0):
+    - OHHTTPStubs/Default
   - Quick (4.0.0)
   - Realm (10.24.0):
     - Realm/Headers (= 10.24.0)
@@ -27,6 +40,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.0)
   - Nimble
   - "NSObject+Rx"
+  - OHHTTPStubs/Swift
   - Quick
   - RealmSwift (~> 10)
   - RxBlocking
@@ -40,6 +54,7 @@ SPEC REPOS:
     - Alamofire
     - Nimble
     - "NSObject+Rx"
+    - OHHTTPStubs
     - Quick
     - Realm
     - RealmSwift
@@ -54,6 +69,7 @@ SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   Realm: 5d6f84e3f65d4efa204d46b461e5bbbbbbf84c6c
   RealmSwift: 9022754b93fad23e1ffc950c93574c5b7899bd51
@@ -64,6 +80,6 @@ SPEC CHECKSUMS:
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
 
-PODFILE CHECKSUM: 4484e9d0eaf688a41d988910bb8d1f5e03d3a84e
+PODFILE CHECKSUM: 045ba9664b4299f47a984313af5fc4553c4ae470
 
 COCOAPODS: 1.10.2

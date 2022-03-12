@@ -9,7 +9,12 @@ import Foundation
 
 class MockServer: NSObject {
     var response: String?
-    func mock(_ url: String, _ status: Int, _ response: String?) {
-        
+    var path: String?
+    var statusCode: Int?
+    
+    func mock(_ path: String, _ statusCode: Int, _ response: String?) {
+        self.path = path
+        self.statusCode = statusCode
+        self.response = response
     }
 }

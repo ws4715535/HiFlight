@@ -13,7 +13,11 @@ enum PaymentResponseCode: String, Codable {
     case serverError = "internal_server_error"
 }
 
-struct PaymentModel: Codable {
+struct PaymentModel: Codable, Hashable, Equatable {
     let code: PaymentResponseCode
     let message: String
+    public static func == (lhs: PaymentModel, rhs: PaymentModel) -> Bool {
+        return lhs.code.rawValue == rhs.code.rawValue
+            && lhs.message == rhs.message
+    }
 }
