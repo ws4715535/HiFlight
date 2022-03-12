@@ -20,20 +20,28 @@ class PaymentViewController: UIViewController {
             return
         }
         viewModel?.payWithOrderId(orderId: order.orderId, payType: .balance, success: { [weak self] result in
-            let alert = UIAlertController(title: "支付结果", message: "支付成功！", preferredStyle: .alert)
-            let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
-            }
-            alert.addAction(confirm)
-            self?.present(alert, animated: true)
+            self?.showSuccessfulPament()
         }, failure: { [weak self] result in
-            let alert = UIAlertController(title: "支付结果", message: result.message, preferredStyle: .alert)
-            let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
-            }
-            alert.addAction(confirm)
-            self?.present(alert, animated: true)
+            self?.showFailedPament(message: result.message)
         })
+    }
+    
+    private func showSuccessfulPament() {
+        let alert = UIAlertController(title: "支付结果", message: "支付成功！", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(confirm)
+        present(alert, animated: true)
+    }
+    
+    private func showFailedPament(message: String) {
+        let alert = UIAlertController(title: "支付结果", message: message, preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(confirm)
+        present(alert, animated: true)
     }
     
 }
