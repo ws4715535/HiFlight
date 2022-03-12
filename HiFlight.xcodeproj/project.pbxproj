@@ -16,6 +16,9 @@
 		54BD636A27DA7869007ED40C /* HiFlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD636927DA7869007ED40C /* HiFlightTests.swift */; };
 		54BD637427DA7869007ED40C /* HiFlightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD637327DA7869007ED40C /* HiFlightUITests.swift */; };
 		54BD637627DA7869007ED40C /* HiFlightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD637527DA7869007ED40C /* HiFlightUITestsLaunchTests.swift */; };
+		5F9A55B149D0EFCF6593E752 /* Pods_HiFlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FCE29451293AEAB5AA8CD3 /* Pods_HiFlight.framework */; };
+		7BE564B1D81C9734A83CFB84 /* Pods_HiFlight_HiFlightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBBF50D17AFE645140C3B46 /* Pods_HiFlight_HiFlightUITests.framework */; };
+		B8AC6F8C0808F968C7DB794C /* Pods_HiFlightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD7FA0FF8EEFBF640DF117 /* Pods_HiFlightTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12FCE29451293AEAB5AA8CD3 /* Pods_HiFlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiFlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlightTests.debug.xcconfig"; path = "Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DFD7FA0FF8EEFBF640DF117 /* Pods_HiFlightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiFlightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C85712945AC571A3116C01 /* Pods-HiFlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight.debug.xcconfig"; path = "Target Support Files/Pods-HiFlight/Pods-HiFlight.debug.xcconfig"; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		54BD636F27DA7869007ED40C /* HiFlightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiFlightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD637327DA7869007ED40C /* HiFlightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiFlightUITests.swift; sourceTree = "<group>"; };
 		54BD637527DA7869007ED40C /* HiFlightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiFlightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81BF9AA4C4A52C3174742933 /* Pods-HiFlightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlightTests.release.xcconfig"; path = "Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests.release.xcconfig"; sourceTree = "<group>"; };
+		99771D271FD57FB87591D633 /* Pods-HiFlight-HiFlightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight-HiFlightUITests.release.xcconfig"; path = "Target Support Files/Pods-HiFlight-HiFlightUITests/Pods-HiFlight-HiFlightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BBC01BBD267C6B495F6A922E /* Pods-HiFlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight.release.xcconfig"; path = "Target Support Files/Pods-HiFlight/Pods-HiFlight.release.xcconfig"; sourceTree = "<group>"; };
+		E25A14349B6B6D591028BC40 /* Pods-HiFlight-HiFlightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight-HiFlightUITests.debug.xcconfig"; path = "Target Support Files/Pods-HiFlight-HiFlightUITests/Pods-HiFlight-HiFlightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDBBF50D17AFE645140C3B46 /* Pods_HiFlight_HiFlightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiFlight_HiFlightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9A55B149D0EFCF6593E752 /* Pods_HiFlight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8AC6F8C0808F968C7DB794C /* Pods_HiFlightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE564B1D81C9734A83CFB84 /* Pods_HiFlight_HiFlightUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				54BD636827DA7869007ED40C /* HiFlightTests */,
 				54BD637227DA7869007ED40C /* HiFlightUITests */,
 				54BD635027DA7867007ED40C /* Products */,
+				8F4535B0141A69797E507585 /* Pods */,
+				7B2049E165CA1E62915854E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +116,9 @@
 		54BD635127DA7867007ED40C /* HiFlight */ = {
 			isa = PBXGroup;
 			children = (
+				54BD638527DA78DB007ED40C /* View */,
+				54BD638327DA78AE007ED40C /* Model */,
+				54BD638227DA78A5007ED40C /* ViewModel */,
 				54BD635227DA7867007ED40C /* AppDelegate.swift */,
 				54BD635427DA7867007ED40C /* SceneDelegate.swift */,
 				54BD635627DA7867007ED40C /* ViewController.swift */,
@@ -127,6 +147,59 @@
 			path = HiFlightUITests;
 			sourceTree = "<group>";
 		};
+		54BD638227DA78A5007ED40C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				54BD638427DA78B9007ED40C /* Networking */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		54BD638327DA78AE007ED40C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54BD638427DA78B9007ED40C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		54BD638527DA78DB007ED40C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B2049E165CA1E62915854E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12FCE29451293AEAB5AA8CD3 /* Pods_HiFlight.framework */,
+				FDBBF50D17AFE645140C3B46 /* Pods_HiFlight_HiFlightUITests.framework */,
+				1DFD7FA0FF8EEFBF640DF117 /* Pods_HiFlightTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F4535B0141A69797E507585 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41C85712945AC571A3116C01 /* Pods-HiFlight.debug.xcconfig */,
+				BBC01BBD267C6B495F6A922E /* Pods-HiFlight.release.xcconfig */,
+				E25A14349B6B6D591028BC40 /* Pods-HiFlight-HiFlightUITests.debug.xcconfig */,
+				99771D271FD57FB87591D633 /* Pods-HiFlight-HiFlightUITests.release.xcconfig */,
+				1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */,
+				81BF9AA4C4A52C3174742933 /* Pods-HiFlightTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54BD637927DA7869007ED40C /* Build configuration list for PBXNativeTarget "HiFlight" */;
 			buildPhases = (
+				BC912D4AEB026A0644DC55E3 /* [CP] Check Pods Manifest.lock */,
 				54BD634B27DA7867007ED40C /* Sources */,
 				54BD634C27DA7867007ED40C /* Frameworks */,
 				54BD634D27DA7867007ED40C /* Resources */,
+				CE87165F3FB50B4CFEF32AFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54BD637C27DA7869007ED40C /* Build configuration list for PBXNativeTarget "HiFlightTests" */;
 			buildPhases = (
+				11CAA934026DEF697A0B122C /* [CP] Check Pods Manifest.lock */,
 				54BD636127DA7869007ED40C /* Sources */,
 				54BD636227DA7869007ED40C /* Frameworks */,
 				54BD636327DA7869007ED40C /* Resources */,
@@ -169,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54BD637F27DA7869007ED40C /* Build configuration list for PBXNativeTarget "HiFlightUITests" */;
 			buildPhases = (
+				E77358C80D6901C2CA87434B /* [CP] Check Pods Manifest.lock */,
 				54BD636B27DA7869007ED40C /* Sources */,
 				54BD636C27DA7869007ED40C /* Frameworks */,
 				54BD636D27DA7869007ED40C /* Resources */,
+				DECE21641DB96CD444A8FFC8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +330,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11CAA934026DEF697A0B122C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiFlightTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC912D4AEB026A0644DC55E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiFlight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE87165F3FB50B4CFEF32AFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlight/Pods-HiFlight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlight/Pods-HiFlight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiFlight/Pods-HiFlight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DECE21641DB96CD444A8FFC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlight-HiFlightUITests/Pods-HiFlight-HiFlightUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlight-HiFlightUITests/Pods-HiFlight-HiFlightUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiFlight-HiFlightUITests/Pods-HiFlight-HiFlightUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E77358C80D6901C2CA87434B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiFlight-HiFlightUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		54BD634B27DA7867007ED40C /* Sources */ = {
@@ -434,6 +615,7 @@
 		};
 		54BD637A27DA7869007ED40C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C85712945AC571A3116C01 /* Pods-HiFlight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +644,7 @@
 		};
 		54BD637B27DA7869007ED40C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBC01BBD267C6B495F6A922E /* Pods-HiFlight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +673,7 @@
 		};
 		54BD637D27DA7869007ED40C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +694,7 @@
 		};
 		54BD637E27DA7869007ED40C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81BF9AA4C4A52C3174742933 /* Pods-HiFlightTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +715,7 @@
 		};
 		54BD638027DA7869007ED40C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E25A14349B6B6D591028BC40 /* Pods-HiFlight-HiFlightUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +734,7 @@
 		};
 		54BD638127DA7869007ED40C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99771D271FD57FB87591D633 /* Pods-HiFlight-HiFlightUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
