@@ -40,7 +40,7 @@ class PaymentViewModel: NSObject {
             case 401:
                 failure(PaymentResultModel(code: PaymentResponseCode.notEnough.rawValue, message: "余额不足"))
             case 500:
-                failure(PaymentResultModel(code: PaymentResponseCode.serverError.rawValue, message: "系统异常"))
+                failure(PaymentResultModel(code: PaymentResponseCode.serverError.rawValue, message: "系统异常")) 
             default:
                 break
             }
