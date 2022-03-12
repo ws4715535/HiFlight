@@ -1,26 +1,69 @@
 PODS:
   - Alamofire (5.4.4)
+  - Nimble (9.2.1)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - Quick (4.0.0)
   - Realm (10.24.0):
     - Realm/Headers (= 10.24.0)
   - Realm/Headers (10.24.0)
   - RealmSwift (10.24.0):
     - Realm (= 10.24.0)
+  - RxBlocking (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxTest (6.2.0):
+    - RxSwift (= 6.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - Nimble
+  - "NSObject+Rx"
+  - Quick
   - RealmSwift (~> 10)
+  - RxBlocking
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - RxTest
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Nimble
+    - "NSObject+Rx"
+    - Quick
     - Realm
     - RealmSwift
+    - RxBlocking
+    - RxCocoa
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   Realm: 5d6f84e3f65d4efa204d46b461e5bbbbbbf84c6c
   RealmSwift: 9022754b93fad23e1ffc950c93574c5b7899bd51
+  RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxTest: 0c692fa672b694373ba86d2b00033595297a2831
 
-PODFILE CHECKSUM: ad647dcbc6eee1c4872d2b19d905f8ebd67d87d0
+PODFILE CHECKSUM: 4484e9d0eaf688a41d988910bb8d1f5e03d3a84e
 
 COCOAPODS: 1.10.2

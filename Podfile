@@ -8,10 +8,17 @@ target 'HiFlight' do
   # Pods for HiFlight
   pod 'RealmSwift', '~>10'
   pod 'Alamofire', '~> 5.0'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'RxOptional'
   target 'HiFlightTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
   target 'HiFlightUITests' do

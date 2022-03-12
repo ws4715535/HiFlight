@@ -5,36 +5,46 @@
 //  Created by shuai.wang on 2022/3/12.
 //
 
-import UIKit
+import Foundation
 import Alamofire
+import RxSwift
+
+struct CustomError: Error {
+    let errorCode: Int
+}
 
 class ApiClient {
     static let shared = ApiClient()
 
-    private func requestUrl<Element: Codable>(url: String, method: HTTPMethod, parameters: Dictionary<String, String>?, responseType: Element.Type, responseData: @escaping (Element?) -> Void) {
+    private func requestUrl<Element: Codable>(url: String, method: HTTPMethod, parameters: Dictionary<String, String>?) -> Observable<Element?> {
         let header: HTTPHeaders =  ["x-access-token": "XXXXX"]
-        AF.request(url, method: method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: header)
-            .responseData { response in
-                switch response.result {
+        return Observable.create({observable -> Disposable in
+            let request = AF.request(url, method: method, parameters: parameters, encoder: JSONParameterEncoder.default, headers: header).responseData { responseData in
+                switch responseData.result {
                 case .success(let data):
-                    print("123")
                     let decoder = JSONDecoder()
                     do {
                         let result = data.isEmpty ? nil : try decoder.decode(Element.self, from: data)
-                        responseData(result)
+                        if responseData.response?.statusCode == 200 {
+                            observable.onNext(result)
+                            observable.onCompleted()
+                        } else {
+                            observable.onError(CustomError(errorCode: responseData.response?.statusCode ?? -1))
+                        }
                     } catch let error {
-                        print(error)
+                        observable.onError(error)
                     }
-                default: break
+                case .failure(let error):
+                    observable.onError(error)
                 }
             }
+            return Disposables.create { request.cancel() }
+        })
     }
-    
-    func requestPayOrder<T: Codable>(_ type: T.Type, orderId: Int, payType: String, response: @escaping (T?) -> Void) {
-        requestUrl(url: "123", method: .post,
-                   parameters:["payType": payType],
-                   responseType: T.self) { result in
-            response(result)
-        }
+
+    func requestPayOrder(orderId: Int, payType: String) -> Observable<PaymentModel?> {
+        let url = "http://balance/payment/\(orderId)"
+        let parameters = ["payType": payType]
+        return requestUrl(url: url, method: .post, parameters: parameters)
     }
 }

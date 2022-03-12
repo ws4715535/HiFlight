@@ -19,15 +19,15 @@ class PaymentViewController: UIViewController {
         guard let order = order else {
             return
         }
-        viewModel?.payWithOrderId(orderId: order.orderId, payType: .balance, success: { [weak self] in
+        viewModel?.payWithOrderId(orderId: order.orderId, payType: .balance, success: { [weak self] result in
             let alert = UIAlertController(title: "支付结果", message: "支付成功！", preferredStyle: .alert)
             let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
                 self?.navigationController?.popViewController(animated: true)
             }
             alert.addAction(confirm)
             self?.present(alert, animated: true)
-        }, failure: { [weak self] message in
-            let alert = UIAlertController(title: "支付结果", message: message, preferredStyle: .alert)
+        }, failure: { [weak self] result in
+            let alert = UIAlertController(title: "支付结果", message: result.message, preferredStyle: .alert)
             let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
                 self?.navigationController?.popViewController(animated: true)
             }

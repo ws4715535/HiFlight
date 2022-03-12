@@ -18,6 +18,9 @@
 		5491FBF927DCBADE00EB2166 /* OrderBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */; };
 		5491FBFB27DCBE4100EB2166 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */; };
 		5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFC27DCBF9400EB2166 /* ApiClient.swift */; };
+		5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */; };
+		5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */; };
+		5491FC0527DD025200EB2166 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0427DD025200EB2166 /* MockServer.swift */; };
 		54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635227DA7867007ED40C /* AppDelegate.swift */; };
 		54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635427DA7867007ED40C /* SceneDelegate.swift */; };
 		54BD635727DA7867007ED40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635627DA7867007ED40C /* ViewController.swift */; };
@@ -65,6 +68,9 @@
 		5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBusinessModel.swift; sourceTree = "<group>"; };
 		5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		5491FBFC27DCBF9400EB2166 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModelTests.swift; sourceTree = "<group>"; };
+		5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResultModel.swift; sourceTree = "<group>"; };
+		5491FC0427DD025200EB2166 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */,
+				5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -134,6 +141,14 @@
 				5491FBF627DCBA8500EB2166 /* PaymentViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5491FC0727DD2B0200EB2166 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				5491FBFE27DCF06900EB2166 /* PaymentViewModelTests.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		54BD634627DA7866007ED40C = {
@@ -178,6 +193,7 @@
 		54BD636827DA7869007ED40C /* HiFlightTests */ = {
 			isa = PBXGroup;
 			children = (
+				5491FC0727DD2B0200EB2166 /* Payment */,
 				54BD636927DA7869007ED40C /* HiFlightTests.swift */,
 			);
 			path = HiFlightTests;
@@ -215,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				5491FBFC27DCBF9400EB2166 /* ApiClient.swift */,
+				5491FC0427DD025200EB2166 /* MockServer.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -286,6 +303,7 @@
 				54BD636127DA7869007ED40C /* Sources */,
 				54BD636227DA7869007ED40C /* Frameworks */,
 				54BD636327DA7869007ED40C /* Resources */,
+				289176BF633D2D2095FF39C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +428,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		289176BF633D2D2095FF39C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BC912D4AEB026A0644DC55E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,7 +540,9 @@
 				5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */,
 				5491FBEB27DCA5B700EB2166 /* FeedbackViewController.swift in Sources */,
 				5491FBE527DCA51700EB2166 /* FlightsViewController.swift in Sources */,
+				5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */,
 				5491FBF127DCB3F800EB2166 /* PaymentViewController.swift in Sources */,
+				5491FC0527DD025200EB2166 /* MockServer.swift in Sources */,
 				54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */,
 				5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */,
 				5491FBF727DCBA8500EB2166 /* PaymentViewModel.swift in Sources */,
@@ -516,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */,
 				54BD636A27DA7869007ED40C /* HiFlightTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
