@@ -42,8 +42,8 @@ class PaymentViewModelTests: QuickSpec {
                     let viewmodel = PaymentViewModel()
                     viewmodel._setSubTestModel(model: subModel)
                     viewmodel.payWithOrderId(orderId: orderId, payType: payType) { result in
-                        actual = result
                     } failure: { error in
+                        actual = error
                     }
                     expect(expected).to(equal(actual))
                 }
@@ -59,8 +59,8 @@ class PaymentViewModelTests: QuickSpec {
                     let viewmodel = PaymentViewModel()
                     viewmodel._setSubTestModel(model: subModel)
                     viewmodel.payWithOrderId(orderId: orderId, payType: payType) { result in
-                        actual = result
                     } failure: { error in
+                        actual = error
                     }
                     expect(expected).to(equal(actual))
                 }

@@ -47,4 +47,13 @@ class ApiClient {
         let parameters = ["payType": payType]
         return requestUrl(path: path, method: .post, parameters: parameters)
     }
+
+    func requestApplyInvoice(orderId: Int, invoiceInfo: String, email: String) -> Observable<InvoiceModel?> {
+        let path = "flights-ticket-orders/\(orderId)/invoice/apply"
+        let parameters = [
+            "email": email,
+            "invoiceInfo": invoiceInfo
+        ]
+        return requestUrl(path: path, method: .post, parameters: parameters)
+    }
 }

@@ -27,6 +27,11 @@
 		5491FC1027DDAB7C00EB2166 /* IMG_7909.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC0D27DDAB7C00EB2166 /* IMG_7909.PNG */; };
 		5491FC1227DDAD5400EB2166 /* invoice_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC1127DDAD5400EB2166 /* invoice_1.PNG */; };
 		5491FC1427DDAEFE00EB2166 /* InvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1327DDAEFE00EB2166 /* InvoiceController.swift */; };
+		5491FC1627DDB0AE00EB2166 /* InvoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1527DDB0AE00EB2166 /* InvoiceViewModel.swift */; };
+		5491FC1827DDB10900EB2166 /* InvoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1727DDB10900EB2166 /* InvoiceModel.swift */; };
+		5491FC1A27DDB35C00EB2166 /* InvoiceBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1927DDB35C00EB2166 /* InvoiceBusinessModel.swift */; };
+		5491FC1E27DDB47E00EB2166 /* InvoiceNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1C27DDB47E00EB2166 /* InvoiceNetworkingTests.swift */; };
+		5491FC1F27DDB47E00EB2166 /* InvoiceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1D27DDB47E00EB2166 /* InvoiceViewModelTests.swift */; };
 		54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635227DA7867007ED40C /* AppDelegate.swift */; };
 		54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635427DA7867007ED40C /* SceneDelegate.swift */; };
 		54BD635727DA7867007ED40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635627DA7867007ED40C /* ViewController.swift */; };
@@ -83,6 +88,11 @@
 		5491FC0D27DDAB7C00EB2166 /* IMG_7909.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_7909.PNG; sourceTree = "<group>"; };
 		5491FC1127DDAD5400EB2166 /* invoice_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invoice_1.PNG; sourceTree = "<group>"; };
 		5491FC1327DDAEFE00EB2166 /* InvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceController.swift; sourceTree = "<group>"; };
+		5491FC1527DDB0AE00EB2166 /* InvoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceViewModel.swift; sourceTree = "<group>"; };
+		5491FC1727DDB10900EB2166 /* InvoiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceModel.swift; sourceTree = "<group>"; };
+		5491FC1927DDB35C00EB2166 /* InvoiceBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceBusinessModel.swift; sourceTree = "<group>"; };
+		5491FC1C27DDB47E00EB2166 /* InvoiceNetworkingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceNetworkingTests.swift; sourceTree = "<group>"; };
+		5491FC1D27DDB47E00EB2166 /* InvoiceViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceViewModelTests.swift; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +146,7 @@
 			children = (
 				5491FBF827DCBADE00EB2166 /* OrderBusinessModel.swift */,
 				5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */,
+				5491FC1927DDB35C00EB2166 /* InvoiceBusinessModel.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				5491FBF627DCBA8500EB2166 /* PaymentViewModel.swift */,
+				5491FC1527DDB0AE00EB2166 /* InvoiceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,6 +185,15 @@
 				5491FC1127DDAD5400EB2166 /* invoice_1.PNG */,
 			);
 			path = rsc;
+			sourceTree = "<group>";
+		};
+		5491FC1B27DDB45700EB2166 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+				5491FC1C27DDB47E00EB2166 /* InvoiceNetworkingTests.swift */,
+				5491FC1D27DDB47E00EB2166 /* InvoiceViewModelTests.swift */,
+			);
+			path = Invoice;
 			sourceTree = "<group>";
 		};
 		54BD634627DA7866007ED40C = {
@@ -218,6 +239,7 @@
 		54BD636827DA7869007ED40C /* HiFlightTests */ = {
 			isa = PBXGroup;
 			children = (
+				5491FC1B27DDB45700EB2166 /* Invoice */,
 				5491FC0727DD2B0200EB2166 /* Payment */,
 				54BD636927DA7869007ED40C /* HiFlightTests.swift */,
 			);
@@ -248,6 +270,7 @@
 				5491FBE327DCA4D400EB2166 /* DataStore */,
 				54BD638427DA78B9007ED40C /* Networking */,
 				5491FBFA27DCBE4100EB2166 /* PaymentModel.swift */,
+				5491FC1727DDB10900EB2166 /* InvoiceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,6 +586,7 @@
 				5491FBF927DCBADE00EB2166 /* OrderBusinessModel.swift in Sources */,
 				54BD635727DA7867007ED40C /* ViewController.swift in Sources */,
 				5491FBFB27DCBE4100EB2166 /* PaymentModel.swift in Sources */,
+				5491FC1827DDB10900EB2166 /* InvoiceModel.swift in Sources */,
 				5491FBED27DCAE7600EB2166 /* FlightCell.swift in Sources */,
 				5491FBEF27DCB00300EB2166 /* FlightDetailViewController.swift in Sources */,
 				5491FBE727DCA53200EB2166 /* OrderViewController.swift in Sources */,
@@ -570,10 +594,12 @@
 				5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */,
 				5491FBEB27DCA5B700EB2166 /* FeedbackViewController.swift in Sources */,
 				5491FBE527DCA51700EB2166 /* FlightsViewController.swift in Sources */,
+				5491FC1A27DDB35C00EB2166 /* InvoiceBusinessModel.swift in Sources */,
 				5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */,
 				5491FBF127DCB3F800EB2166 /* PaymentViewController.swift in Sources */,
 				5491FC0527DD025200EB2166 /* MockServer.swift in Sources */,
 				54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */,
+				5491FC1627DDB0AE00EB2166 /* InvoiceViewModel.swift in Sources */,
 				5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */,
 				5491FBF727DCBA8500EB2166 /* PaymentViewModel.swift in Sources */,
 				5491FC1427DDAEFE00EB2166 /* InvoiceController.swift in Sources */,
@@ -584,6 +610,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5491FC1F27DDB47E00EB2166 /* InvoiceViewModelTests.swift in Sources */,
+				5491FC1E27DDB47E00EB2166 /* InvoiceNetworkingTests.swift in Sources */,
 				5491FC0927DD33B900EB2166 /* PaymentNetworkingTests.swift in Sources */,
 				5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */,
 				54BD636A27DA7869007ED40C /* HiFlightTests.swift in Sources */,

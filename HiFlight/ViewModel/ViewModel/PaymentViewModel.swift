@@ -29,7 +29,16 @@ class PaymentViewModel: NSObject {
         var obModel: Observable<PaymentModel?> = ApiClient.shared.requestPayOrder(orderId: orderId, payType: payType.rawValue)
         if let _sub = _subTestModel as? PaymentModel {
             model = _sub
-            obModel = Observable.just(model)
+            switch model?.code {
+            case .success:
+                obModel = Observable.just(model)
+            case .notEnough:
+                obModel = Observable.error(CustomError(errorCode: 401))
+            case .serverError:
+                obModel = Observable.error(CustomError(errorCode: 500))
+            case .none:
+                break
+            }
         }
         obModel.subscribe { model in
             guard let model = model else { return }
