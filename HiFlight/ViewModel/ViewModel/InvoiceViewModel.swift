@@ -34,6 +34,7 @@ class InvoiceViewModel: NSObject {
             switch customError.errorCode {
             case 404:
                 failure(InvoiceBusinessModel(code: InvoiceResponseCode.notFound.rawValue, message: "开票失败，订单不存在"))
+                
             case 500:
                 failure(InvoiceBusinessModel(code: InvoiceResponseCode.serverError.rawValue, message: "系统异常"))
             default:

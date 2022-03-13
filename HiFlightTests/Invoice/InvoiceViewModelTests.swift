@@ -49,6 +49,24 @@ class InvoiceModelTests: QuickSpec {
                     }
                     expect(expected).to(equal(actual))
                 }
+                
+                it("shoudle callback failed logic in viewmodel when invoice apply is failed because of internal server error") {
+                    let orderId = 800001
+                    let email = "shuai.wang@thoughtworks.com"
+                    let invoiceInfo = "taxNumber:123123"
+                    
+                    let subModel = InvoiceModel(code: .serverError, message: "系统异常")
+                    let expected = InvoiceBusinessModel(code: "internal_server_error", message: "系统异常")
+                    var actual: InvoiceBusinessModel?
+                    
+                    let viewmodel = InvoiceViewModel()
+                    viewmodel._setSubTestModel(model: subModel)
+                    viewmodel.applyInvoice(orderId: orderId, info: invoiceInfo, email: email) { model in
+                    } failure: { error in
+                        actual = error
+                    }
+                    expect(expected).to(equal(actual))
+                }
             }
         }
     }
