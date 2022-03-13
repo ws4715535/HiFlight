@@ -15,7 +15,16 @@ class InvoiceViewModel: NSObject {
         var obModel: Observable<InvoiceModel?> = ApiClient.shared.requestApplyInvoice(orderId: orderId, invoiceInfo: info, email: email)
         if let _sub = _subTestModel as? InvoiceModel {
             model = _sub
-            obModel = Observable.just(model)
+            switch model?.code {
+            case .success:
+                obModel = Observable.just(model)
+            case .notFound:
+                obModel = Observable.error(CustomError(errorCode: 404))
+            case .serverError:
+                obModel = Observable.error(CustomError(errorCode: 500))
+            case .none:
+                break
+            }
         }
         obModel.subscribe { model in
             guard let model = model else { return }
@@ -24,9 +33,9 @@ class InvoiceViewModel: NSObject {
             guard let customError = error as? CustomError else { return }
             switch customError.errorCode {
             case 404:
-                failure(InvoiceBusinessModel(code: PaymentResponseCode.notEnough.rawValue, message: "余额不足"))
+                failure(InvoiceBusinessModel(code: InvoiceResponseCode.notFound.rawValue, message: "开票失败，订单不存在"))
             case 500:
-                failure(InvoiceBusinessModel(code: PaymentResponseCode.serverError.rawValue, message: "系统异常"))
+                failure(InvoiceBusinessModel(code: InvoiceResponseCode.serverError.rawValue, message: "系统异常"))
             default:
                 break
             }
