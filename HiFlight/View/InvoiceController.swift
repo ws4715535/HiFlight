@@ -9,7 +9,7 @@ import UIKit
 
 class InvoiceController: UIViewController {
     var viewModel: InvoiceViewModel?
-    let orderId = 888888
+    let orderId = 800001
     let info = "texInfo:123123"
     let email = "shuai.wang@thoughtworks.com"
     override func viewDidLoad() {

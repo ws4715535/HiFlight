@@ -20,7 +20,7 @@ class PaymentNetworkingTests: QuickSpec {
                     HTTPStubs.removeAllStubs()
                 }
                 it("shoudle get success response in happy path") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let stubData = "{\"code\": \"success\",\"message\": \"支付成功\"}"
                     
                     let expectPath = "/balance/payment/\(orderId)"
@@ -37,7 +37,7 @@ class PaymentNetworkingTests: QuickSpec {
                 }
                 
                 it("shoudle get success response in happy path") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let stubData = "{\"code\": \"balance_not_enough\",\"message\": \"余额不足\"}"
                     
                     let expectPath = "/balance/payment/\(orderId)"
@@ -54,7 +54,7 @@ class PaymentNetworkingTests: QuickSpec {
                 }
                 
                 it("shoudle get success response in happy path") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let stubData = "{\"code\": \"internal_server_error\",\"message\": \"系统异常\"}"
                     
                     let expectPath = "/balance/payment/\(orderId)"

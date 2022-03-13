@@ -15,7 +15,7 @@ class InvoiceModelTests: QuickSpec {
         describe("PaymentViewModelTests") {
             context("stub networking, test viewmodel logic") {
                 it("shoudle callback success logic in viewmodel when payment is success") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let email = "shuai.wang@thoughtworks.com"
                     let invoiceInfo = "taxNumber:123123"
                     

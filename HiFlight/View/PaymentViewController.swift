@@ -12,7 +12,7 @@ class PaymentViewController: UIViewController {
     var viewModel: PaymentViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        order = OrderBusinessModel(orderId: 888888)
+        order = OrderBusinessModel(orderId: 800001)
         viewModel = PaymentViewModel()
     }
     @IBAction func pay(_ sender: UIButton) {

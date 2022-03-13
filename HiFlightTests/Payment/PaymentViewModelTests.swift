@@ -15,7 +15,7 @@ class PaymentViewModelTests: QuickSpec {
         describe("PaymentViewModelTests") {
             context("stub networking, test viewmodel logic") {
                 it("shoudle callback success logic in viewmodel when payment is success") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let payType = PayType.balance
                     
                     let subModel = PaymentModel(code: .success, message: "支付成功")
@@ -32,7 +32,7 @@ class PaymentViewModelTests: QuickSpec {
                 }
                 
                 it("shoudle callback failed logic in viewmodel when payment is failed because of balance isn't enough") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let payType = PayType.balance
                     
                     let subModel = PaymentModel(code: .notEnough, message: "余额不足")
@@ -49,7 +49,7 @@ class PaymentViewModelTests: QuickSpec {
                 }
                 
                 it("shoudle callback failed logic in viewmodel when payment is failed because of internal server error") {
-                    let orderId = 888888
+                    let orderId = 800001
                     let payType = PayType.balance
                     
                     let subModel = PaymentModel(code: .serverError, message: "系统异常")
