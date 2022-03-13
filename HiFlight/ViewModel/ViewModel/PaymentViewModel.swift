@@ -33,9 +33,9 @@ class PaymentViewModel: NSObject {
             case .success:
                 obModel = Observable.just(model)
             case .notEnough:
-                obModel = Observable.error(CustomError(errorCode: 401))
+                obModel = Observable.error(CustomError(errorCode: 401, errorBody: nil))
             case .serverError:
-                obModel = Observable.error(CustomError(errorCode: 500))
+                obModel = Observable.error(CustomError(errorCode: 500, errorBody: nil))
             case .none:
                 break
             }

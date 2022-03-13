@@ -11,6 +11,7 @@ import RxSwift
 
 struct CustomError: Error {
     let errorCode: Int
+    let errorBody: String?
 }
 let baseUrl = "http://hiFlight.com/"
 class ApiClient {
@@ -29,7 +30,8 @@ class ApiClient {
                             observable.onNext(result)
                             observable.onCompleted()
                         } else {
-                            observable.onError(CustomError(errorCode: responseData.response?.statusCode ?? -1))
+                            let errorData = String(data: data, encoding: .utf8)
+                            observable.onError(CustomError(errorCode: responseData.response?.statusCode ?? -1, errorBody: errorData))
                         }
                     } catch let error {
                         observable.onError(error)

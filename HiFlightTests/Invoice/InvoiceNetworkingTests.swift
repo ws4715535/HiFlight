@@ -38,6 +38,22 @@ class InvoiceNetworkingTests: QuickSpec {
                     } onError: { error in
                 }
               }
+                it("shoudle get error response in apply invoice when order is not found") {
+                    let orderId = 800001
+                    let stubData = "{\"code\": \"order_not_found\",\"message\": \"订单不存在\"}"
+                    
+                    let expectPath = "/balance/payment/\(orderId)"
+                    
+                    stub(condition: isMethodPOST()) { request in
+                        expect(expectPath).to(equal(request.url?.path))
+                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 401, headers: nil)
+                     }
+                    _ = ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
+                    } onError: { error in
+                        guard let customError = error as? CustomError else { return }
+                        expect(customError.errorBody!).to(equal(stubData))
+                    }
+                }
             }
         }
     }

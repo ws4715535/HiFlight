@@ -36,37 +36,37 @@ class PaymentNetworkingTests: QuickSpec {
                     }
                 }
                 
-                it("shoudle get success response in happy path") {
+                it("shoudle get error response in payment sad path") {
                     let orderId = 800001
                     let stubData = "{\"code\": \"balance_not_enough\",\"message\": \"余额不足\"}"
                     
                     let expectPath = "/balance/payment/\(orderId)"
-                    let expectedModel = PaymentModel(code: .notEnough, message: "余额不足")
                     
                     stub(condition: isMethodPOST()) { request in
                         expect(expectPath).to(equal(request.url?.path))
-                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 200, headers: nil)
+                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 401, headers: nil)
                      }
                     _ = ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
-                        expect(expectedModel).to(equal(model!))
                     } onError: { error in
+                        guard let customError = error as? CustomError else { return }
+                        expect(customError.errorBody!).to(equal(stubData))
                     }
                 }
                 
-                it("shoudle get success response in happy path") {
+                it("shoudle get error response in payment exception path") {
                     let orderId = 800001
                     let stubData = "{\"code\": \"internal_server_error\",\"message\": \"系统异常\"}"
                     
                     let expectPath = "/balance/payment/\(orderId)"
-                    let expectedModel = PaymentModel(code: .notEnough, message: "系统异常")
                     
                     stub(condition: isMethodPOST()) { request in
                         expect(expectPath).to(equal(request.url?.path))
-                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 200, headers: nil)
+                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 500, headers: nil)
                      }
                     _ = ApiClient.shared.requestPayOrder(orderId: orderId, payType: PayType.balance.rawValue).subscribe { model in
-                        expect(expectedModel).to(equal(model!))
                     } onError: { error in
+                        guard let customError = error as? CustomError else { return }
+                        expect(customError.errorBody!).to(equal(stubData))
                     }
                 }
             }

@@ -19,9 +19,9 @@ class InvoiceViewModel: NSObject {
             case .success:
                 obModel = Observable.just(model)
             case .notFound:
-                obModel = Observable.error(CustomError(errorCode: 404))
+                obModel = Observable.error(CustomError(errorCode: 404, errorBody: nil))
             case .serverError:
-                obModel = Observable.error(CustomError(errorCode: 500))
+                obModel = Observable.error(CustomError(errorCode: 500, errorBody: nil))
             case .none:
                 break
             }
