@@ -25,15 +25,6 @@ class PaymentViewController: UIViewController {
             self?.showFailedPament(message: result.message)
         })
     }
-    
-    private func showSuccessfulPament() {
-        let alert = UIAlertController(title: "支付结果", message: "支付成功！", preferredStyle: .alert)
-        let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(confirm)
-        present(alert, animated: true)
-    }
 
     private func showFailedPament(message: String) {
         let alert = UIAlertController(title: "支付结果", message: message, preferredStyle: .alert)
@@ -43,5 +34,13 @@ class PaymentViewController: UIViewController {
         alert.addAction(confirm)
         present(alert, animated: true)
     }
-    
+
+    private func showSuccessfulPament() {
+        let alert = UIAlertController(title: "支付结果", message: "支付成功！", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(confirm)
+        present(alert, animated: true)
+    }
 }
