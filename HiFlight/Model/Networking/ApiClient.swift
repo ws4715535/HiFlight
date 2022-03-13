@@ -13,7 +13,7 @@ struct CustomError: Error {
     let errorCode: Int
     let errorBody: String?
 }
-let baseUrl = "http://hiFlight.com/"
+let baseUrl = "https://hiFlight.com"
 class ApiClient {
     static let shared = ApiClient()
 
@@ -45,13 +45,13 @@ class ApiClient {
     }
 
     func requestPayOrder(orderId: Int, payType: String) -> Observable<PaymentModel?> {
-        let path = "balance/payment/\(orderId)"
+        let path = "/balance/payment/\(orderId)"
         let parameters = ["payType": payType]
         return requestUrl(path: path, method: .post, parameters: parameters)
     }
 
     func requestApplyInvoice(orderId: Int, invoiceInfo: String, email: String) -> Observable<InvoiceModel?> {
-        let path = "flights-ticket-orders/\(orderId)/invoice/apply"
+        let path = "/flights-ticket-orders/\(orderId)/invoice/apply"
         let parameters = [
             "email": email,
             "invoiceInfo": invoiceInfo

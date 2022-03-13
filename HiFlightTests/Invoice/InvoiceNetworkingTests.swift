@@ -54,6 +54,24 @@ class InvoiceNetworkingTests: QuickSpec {
                         expect(customError.errorBody!).to(equal(stubData))
                     }
                 }
+                it("shoudle get error response in apply invoice when internal server error") {
+                    let orderId = 800001
+                    let stubData = "{\"code\": \"internal_server_error\",\"message\": \"系统异常\"}"
+                    let email = "shuai.wang@thoughtworks.com"
+                    let invoiceInfo = "tax:123123"
+                    
+                    let expectPath = "/flights-ticket-orders/\(orderId)/invoice/apply"
+
+                    stub(condition: isMethodPOST()) { request in
+                        expect(expectPath).to(equal(request.url?.path))
+                        return HTTPStubsResponse(data: stubData.data(using: .utf8)!, statusCode: 500, headers: nil)
+                     }
+                    _ = ApiClient.shared.requestApplyInvoice(orderId: orderId, invoiceInfo: invoiceInfo, email: email).subscribe { model in
+                    } onError: { error in
+                        guard let customError = error as? CustomError else { return }                        
+                        expect(customError.errorBody!).to(equal(stubData))
+                    }
+                }
             }
         }
     }
