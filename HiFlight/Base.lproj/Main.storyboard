@@ -47,7 +47,7 @@
         <!--订单-->
         <scene sceneID="eG6-s7-MwO">
             <objects>
-                <navigationController hidesBottomBarWhenPushed="YES" id="sxh-3I-Jf6" sceneMemberID="viewController">
+                <navigationController id="sxh-3I-Jf6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="订单" image="circles.hexagonpath.fill" catalog="system" id="UcE-cO-oa4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wHz-hr-CAT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -163,28 +163,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gj-HL-lcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842.0289855072465" y="-494.19642857142856"/>
+            <point key="canvasLocation" x="1778" y="-507"/>
         </scene>
         <!--订单-->
         <scene sceneID="WfX-Cr-ISq">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="czF-We-HNC" customClass="OrderViewController" customModule="HiFlight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="czF-We-HNC" customClass="OrderViewController" customModule="HiFlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EWj-nC-Nw3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7910.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="2Kv-Yu-n2j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP6-JP-0kp">
+                                <rect key="frame" x="166" y="694" width="75" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="560-3j-05W"/>
+                                    <constraint firstAttribute="height" constant="39" id="6rT-A0-4KI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="发具发票">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pda-l2-zzL" kind="show" id="g2T-x9-IPo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0IG-5R-8t2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0IG-5R-8t2" firstAttribute="bottom" secondItem="XP6-JP-0kp" secondAttribute="bottom" constant="80" id="Bna-6t-493"/>
+                            <constraint firstItem="2Kv-Yu-n2j" firstAttribute="leading" secondItem="0IG-5R-8t2" secondAttribute="leading" id="EBZ-c2-dHD"/>
+                            <constraint firstItem="0IG-5R-8t2" firstAttribute="trailing" secondItem="2Kv-Yu-n2j" secondAttribute="trailing" id="PRr-Eg-dAm"/>
+                            <constraint firstItem="XP6-JP-0kp" firstAttribute="centerX" secondItem="EWj-nC-Nw3" secondAttribute="centerX" constant="-3.5" id="ioR-hc-WMT"/>
+                            <constraint firstItem="0IG-5R-8t2" firstAttribute="bottom" secondItem="2Kv-Yu-n2j" secondAttribute="bottom" id="mpv-Qc-8C5"/>
+                            <constraint firstItem="2Kv-Yu-n2j" firstAttribute="top" secondItem="0IG-5R-8t2" secondAttribute="top" id="oPP-hL-Abe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="订单" id="5f7-4a-Izc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3y-iW-39N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="226"/>
+            <point key="canvasLocation" x="1860.8695652173915" y="225.66964285714283"/>
         </scene>
         <!--我的-->
         <scene sceneID="QRz-ch-Bw6">
             <objects>
-                <viewController id="2xd-Ht-4nU" customClass="FlightsViewController" customModule="HiFlight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2xd-Ht-4nU" customClass="MineViewController" customModule="HiFlight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GwB-XV-c1Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,11 +396,79 @@
             </objects>
             <point key="canvasLocation" x="3398.5507246376815" y="-494.19642857142856"/>
         </scene>
+        <!--订单-->
+        <scene sceneID="ids-Fo-VJB">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="pda-l2-zzL" customClass="InvoiceController" customModule="HiFlight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYV-oz-p68">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invoice_1.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="gGs-dz-pkK">
+                                <rect key="frame" x="0.0" y="-116" width="414" height="867"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cau-go-bVl">
+                                <rect key="frame" x="166" y="743" width="75" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="0xl-21-OCc"/>
+                                    <constraint firstAttribute="height" constant="39" id="xBM-ha-7oV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="提交申请">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="apply:" destination="pda-l2-zzL" eventType="touchUpInside" id="NSI-kA-b0E"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dhlogo" translatesAutoresizingMaskIntoConstraints="NO" id="qFU-UO-Kxz">
+                                <rect key="frame" x="20" y="135" width="63" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Kxd-o4-qtw"/>
+                                    <constraint firstAttribute="width" constant="63" id="edl-wy-Lft"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="邮箱:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgv-uW-oqd">
+                                <rect key="frame" x="30" y="515" width="53" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shuai.wang@thooughtworks.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIB-Cb-R4P">
+                                <rect key="frame" x="142" y="528" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OcO-pt-6dG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cau-go-bVl" firstAttribute="centerX" secondItem="fYV-oz-p68" secondAttribute="centerX" constant="-3.5" id="KNf-Ee-euv"/>
+                            <constraint firstItem="gGs-dz-pkK" firstAttribute="top" secondItem="OcO-pt-6dG" secondAttribute="top" constant="-204" id="Ykm-hW-hnr"/>
+                            <constraint firstItem="OcO-pt-6dG" firstAttribute="trailing" secondItem="gGs-dz-pkK" secondAttribute="trailing" id="dIY-nk-PZB"/>
+                            <constraint firstItem="OcO-pt-6dG" firstAttribute="trailing" secondItem="VIB-Cb-R4P" secondAttribute="trailing" constant="20" id="eS4-HV-59H"/>
+                            <constraint firstItem="gGs-dz-pkK" firstAttribute="leading" secondItem="OcO-pt-6dG" secondAttribute="leading" id="gda-mE-Mlb"/>
+                            <constraint firstItem="qFU-UO-Kxz" firstAttribute="leading" secondItem="OcO-pt-6dG" secondAttribute="leading" constant="20" id="jgw-EL-KFS"/>
+                            <constraint firstItem="OcO-pt-6dG" firstAttribute="bottom" secondItem="Cau-go-bVl" secondAttribute="bottom" constant="80" id="kNX-D5-3bS"/>
+                            <constraint firstItem="VIB-Cb-R4P" firstAttribute="top" secondItem="OcO-pt-6dG" secondAttribute="top" constant="440" id="pi1-GJ-ukh"/>
+                            <constraint firstItem="qFU-UO-Kxz" firstAttribute="top" secondItem="OcO-pt-6dG" secondAttribute="top" constant="47" id="yxK-yX-flm"/>
+                            <constraint firstItem="OcO-pt-6dG" firstAttribute="bottom" secondItem="gGs-dz-pkK" secondAttribute="bottom" constant="111" id="z2W-mE-lAb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="订单" id="03I-MD-djX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dW4-Mp-uWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="226"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="IMG_7910.PNG" width="1170" height="2532"/>
         <image name="airplane.circle" catalog="system" width="128" height="121"/>
         <image name="circles.hexagonpath.fill" catalog="system" width="128" height="112"/>
         <image name="dhlogo" width="110" height="114.5"/>
+        <image name="invoice_1.PNG" width="1170" height="1060"/>
         <image name="person.wave.2" catalog="system" width="128" height="119"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

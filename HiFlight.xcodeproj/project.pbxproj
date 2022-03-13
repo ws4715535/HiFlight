@@ -22,6 +22,11 @@
 		5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */; };
 		5491FC0527DD025200EB2166 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0427DD025200EB2166 /* MockServer.swift */; };
 		5491FC0927DD33B900EB2166 /* PaymentNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC0827DD33B900EB2166 /* PaymentNetworkingTests.swift */; };
+		5491FC0E27DDAB7C00EB2166 /* IMG_7910.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC0B27DDAB7C00EB2166 /* IMG_7910.PNG */; };
+		5491FC0F27DDAB7C00EB2166 /* IMG_7908.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC0C27DDAB7C00EB2166 /* IMG_7908.PNG */; };
+		5491FC1027DDAB7C00EB2166 /* IMG_7909.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC0D27DDAB7C00EB2166 /* IMG_7909.PNG */; };
+		5491FC1227DDAD5400EB2166 /* invoice_1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5491FC1127DDAD5400EB2166 /* invoice_1.PNG */; };
+		5491FC1427DDAEFE00EB2166 /* InvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FC1327DDAEFE00EB2166 /* InvoiceController.swift */; };
 		54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635227DA7867007ED40C /* AppDelegate.swift */; };
 		54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635427DA7867007ED40C /* SceneDelegate.swift */; };
 		54BD635727DA7867007ED40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BD635627DA7867007ED40C /* ViewController.swift */; };
@@ -73,6 +78,11 @@
 		5491FC0027DCFA1F00EB2166 /* PaymentResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResultModel.swift; sourceTree = "<group>"; };
 		5491FC0427DD025200EB2166 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		5491FC0827DD33B900EB2166 /* PaymentNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentNetworkingTests.swift; sourceTree = "<group>"; };
+		5491FC0B27DDAB7C00EB2166 /* IMG_7910.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_7910.PNG; sourceTree = "<group>"; };
+		5491FC0C27DDAB7C00EB2166 /* IMG_7908.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_7908.PNG; sourceTree = "<group>"; };
+		5491FC0D27DDAB7C00EB2166 /* IMG_7909.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_7909.PNG; sourceTree = "<group>"; };
+		5491FC1127DDAD5400EB2166 /* invoice_1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invoice_1.PNG; sourceTree = "<group>"; };
+		5491FC1327DDAEFE00EB2166 /* InvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceController.swift; sourceTree = "<group>"; };
 		54BD634F27DA7867007ED40C /* HiFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BD635227DA7867007ED40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54BD635427DA7867007ED40C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +164,17 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
+		5491FC0A27DDAB6F00EB2166 /* rsc */ = {
+			isa = PBXGroup;
+			children = (
+				5491FC0C27DDAB7C00EB2166 /* IMG_7908.PNG */,
+				5491FC0D27DDAB7C00EB2166 /* IMG_7909.PNG */,
+				5491FC0B27DDAB7C00EB2166 /* IMG_7910.PNG */,
+				5491FC1127DDAD5400EB2166 /* invoice_1.PNG */,
+			);
+			path = rsc;
+			sourceTree = "<group>";
+		};
 		54BD634627DA7866007ED40C = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +208,7 @@
 				54BD635627DA7867007ED40C /* ViewController.swift */,
 				54BD635827DA7867007ED40C /* Main.storyboard */,
 				54BD635B27DA7869007ED40C /* Assets.xcassets */,
+				5491FC0A27DDAB6F00EB2166 /* rsc */,
 				54BD635D27DA7869007ED40C /* LaunchScreen.storyboard */,
 				54BD636027DA7869007ED40C /* Info.plist */,
 			);
@@ -245,6 +267,7 @@
 				5491FBE427DCA51700EB2166 /* FlightsViewController.swift */,
 				5491FBEE27DCB00300EB2166 /* FlightDetailViewController.swift */,
 				5491FBE627DCA53200EB2166 /* OrderViewController.swift */,
+				5491FC1327DDAEFE00EB2166 /* InvoiceController.swift */,
 				5491FBE827DCA54C00EB2166 /* MineViewController.swift */,
 				5491FBEA27DCA5B700EB2166 /* FeedbackViewController.swift */,
 				5491FBEC27DCAE7600EB2166 /* FlightCell.swift */,
@@ -386,6 +409,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5491FC0E27DDAB7C00EB2166 /* IMG_7910.PNG in Resources */,
+				5491FC0F27DDAB7C00EB2166 /* IMG_7908.PNG in Resources */,
+				5491FC1027DDAB7C00EB2166 /* IMG_7909.PNG in Resources */,
+				5491FC1227DDAD5400EB2166 /* invoice_1.PNG in Resources */,
 				54BD635F27DA7869007ED40C /* LaunchScreen.storyboard in Resources */,
 				54BD635C27DA7869007ED40C /* Assets.xcassets in Resources */,
 				54BD635A27DA7867007ED40C /* Main.storyboard in Resources */,
@@ -549,6 +576,7 @@
 				54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */,
 				5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */,
 				5491FBF727DCBA8500EB2166 /* PaymentViewModel.swift in Sources */,
+				5491FC1427DDAEFE00EB2166 /* InvoiceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
