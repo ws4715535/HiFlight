@@ -18,13 +18,13 @@ class InvoiceController: UIViewController {
 
     @IBAction func apply(_ sender: Any) {
         viewModel?.applyInvoice(orderId: orderId, info: info, email: email, success: { model in
-            self.showSuccessfulApply()
+            self.handleSuccessfulApply()
         }, failure: { error in
-            self.showFailedApply(message: error.message)
+            self.handleFailedApply(message: error.message)
         })
     }
 
-    private func showSuccessfulApply() {
+    private func handleSuccessfulApply() {
         let alert = UIAlertController(title: "开票申请结果", message: "开票申请成功！", preferredStyle: .alert)
         let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)
@@ -33,7 +33,7 @@ class InvoiceController: UIViewController {
         present(alert, animated: true)
     }
     
-    private func showFailedApply(message: String) {
+    private func handleFailedApply(message: String) {
         let alert = UIAlertController(title: "开票申请结果", message: message, preferredStyle: .alert)
         let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)

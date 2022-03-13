@@ -34,7 +34,7 @@ class PaymentViewController: UIViewController {
         alert.addAction(confirm)
         present(alert, animated: true)
     }
-    
+
     private func showFailedPament(message: String) {
         let alert = UIAlertController(title: "支付结果", message: message, preferredStyle: .alert)
         let confirm = UIAlertAction(title: "确认", style: .default) { [weak self] _ in
