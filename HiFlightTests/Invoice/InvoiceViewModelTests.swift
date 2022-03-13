@@ -12,7 +12,7 @@ import Nimble
 
 class InvoiceModelTests: QuickSpec {
     override func spec() {
-        describe("PaymentViewModelTests") {
+        describe("InvoiceModelTests") {
             context("stub networking, test viewmodel logic") {
                 it("shoudle callback success logic in viewmodel when payment is success") {
                     let orderId = 800001

@@ -15,3 +15,10 @@ struct InvoiceBusinessModel: Hashable, Equatable {
             && lhs.message == rhs.message
     }
 }
+
+struct InvoiceApplyBusinessModel {
+    let orderId: Int
+    let email: String
+    let invoiceInfo: String
+}
+

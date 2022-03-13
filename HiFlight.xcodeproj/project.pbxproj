@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54792F8B27DDFDF700373443 /* InvoiceDBEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54792F8A27DDFDF700373443 /* InvoiceDBEntity.swift */; };
+		54792F8D27DDFE0600373443 /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54792F8C27DDFE0600373443 /* DataStoreManager.swift */; };
+		54792F8F27DE0AFC00373443 /* InvoiceDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54792F8E27DE0AFC00373443 /* InvoiceDBTests.swift */; };
 		5491FBE527DCA51700EB2166 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE427DCA51700EB2166 /* FlightsViewController.swift */; };
 		5491FBE727DCA53200EB2166 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE627DCA53200EB2166 /* OrderViewController.swift */; };
 		5491FBE927DCA54C00EB2166 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5491FBE827DCA54C00EB2166 /* MineViewController.swift */; };
@@ -68,6 +71,9 @@
 		1CEBB88FDA7A2F83EB24E3A1 /* Pods-HiFlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlightTests.debug.xcconfig"; path = "Target Support Files/Pods-HiFlightTests/Pods-HiFlightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1DFD7FA0FF8EEFBF640DF117 /* Pods_HiFlightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiFlightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C85712945AC571A3116C01 /* Pods-HiFlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiFlight.debug.xcconfig"; path = "Target Support Files/Pods-HiFlight/Pods-HiFlight.debug.xcconfig"; sourceTree = "<group>"; };
+		54792F8A27DDFDF700373443 /* InvoiceDBEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDBEntity.swift; sourceTree = "<group>"; };
+		54792F8C27DDFE0600373443 /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		54792F8E27DE0AFC00373443 /* InvoiceDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDBTests.swift; sourceTree = "<group>"; };
 		5491FBE427DCA51700EB2166 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		5491FBE627DCA53200EB2166 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		5491FBE827DCA54C00EB2166 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54792F8927DDFDC800373443 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				54792F8A27DDFDF700373443 /* InvoiceDBEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		5491FBE227DCA4CA00EB2166 /* BusinessModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +168,8 @@
 		5491FBE327DCA4D400EB2166 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				54792F8927DDFDC800373443 /* Entity */,
+				54792F8C27DDFE0600373443 /* DataStoreManager.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 			children = (
 				5491FC1C27DDB47E00EB2166 /* InvoiceNetworkingTests.swift */,
 				5491FC1D27DDB47E00EB2166 /* InvoiceViewModelTests.swift */,
+				54792F8E27DE0AFC00373443 /* InvoiceDBTests.swift */,
 			);
 			path = Invoice;
 			sourceTree = "<group>";
@@ -589,6 +606,7 @@
 				5491FC1827DDB10900EB2166 /* InvoiceModel.swift in Sources */,
 				5491FBED27DCAE7600EB2166 /* FlightCell.swift in Sources */,
 				5491FBEF27DCB00300EB2166 /* FlightDetailViewController.swift in Sources */,
+				54792F8B27DDFDF700373443 /* InvoiceDBEntity.swift in Sources */,
 				5491FBE727DCA53200EB2166 /* OrderViewController.swift in Sources */,
 				54BD635327DA7867007ED40C /* AppDelegate.swift in Sources */,
 				5491FBFD27DCBF9400EB2166 /* ApiClient.swift in Sources */,
@@ -597,6 +615,7 @@
 				5491FC1A27DDB35C00EB2166 /* InvoiceBusinessModel.swift in Sources */,
 				5491FC0127DCFA1F00EB2166 /* PaymentResultModel.swift in Sources */,
 				5491FBF127DCB3F800EB2166 /* PaymentViewController.swift in Sources */,
+				54792F8D27DDFE0600373443 /* DataStoreManager.swift in Sources */,
 				5491FC0527DD025200EB2166 /* MockServer.swift in Sources */,
 				54BD635527DA7867007ED40C /* SceneDelegate.swift in Sources */,
 				5491FC1627DDB0AE00EB2166 /* InvoiceViewModel.swift in Sources */,
@@ -611,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5491FC1F27DDB47E00EB2166 /* InvoiceViewModelTests.swift in Sources */,
+				54792F8F27DE0AFC00373443 /* InvoiceDBTests.swift in Sources */,
 				5491FC1E27DDB47E00EB2166 /* InvoiceNetworkingTests.swift in Sources */,
 				5491FC0927DD33B900EB2166 /* PaymentNetworkingTests.swift in Sources */,
 				5491FBFF27DCF06900EB2166 /* PaymentViewModelTests.swift in Sources */,

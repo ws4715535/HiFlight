@@ -34,15 +34,19 @@ class InvoiceViewModel: NSObject {
             switch customError.errorCode {
             case 404:
                 failure(InvoiceBusinessModel(code: InvoiceResponseCode.notFound.rawValue, message: "开票失败，订单不存在"))
-                
             case 500:
+                self.cacheInvoice(InvoiceApplyBusinessModel(orderId: orderId, email: email, invoiceInfo: info))
                 failure(InvoiceBusinessModel(code: InvoiceResponseCode.serverError.rawValue, message: "系统异常"))
             default:
                 break
             }
         }.disposed(by: rx.disposeBag)
     }
-    
+
+    func cacheInvoice(_ model: InvoiceApplyBusinessModel) {
+        DataStoreManager.shared.add(element: InvoiceApplyDBEntity(id: model.orderId, email: model.email, invoiceInfo: model.invoiceInfo, status: 1))
+    }
+
     // testOnly
     func _setSubTestModel<T>(model: T) {
         _subTestModel = model

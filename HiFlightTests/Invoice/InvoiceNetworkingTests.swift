@@ -14,7 +14,7 @@ import OHHTTPStubs
 
 class InvoiceNetworkingTests: QuickSpec {
     override func spec() {
-        describe("PaymentNetworkingTests") {
+        describe("InvoiceNetworkingTests") {
             context("Face BFF, test Networking function") {
                 afterEach {
                     HTTPStubs.removeAllStubs()
@@ -68,7 +68,7 @@ class InvoiceNetworkingTests: QuickSpec {
                      }
                     _ = ApiClient.shared.requestApplyInvoice(orderId: orderId, invoiceInfo: invoiceInfo, email: email).subscribe { model in
                     } onError: { error in
-                        guard let customError = error as? CustomError else { return }                        
+                        guard let customError = error as? CustomError else { return }
                         expect(customError.errorBody!).to(equal(stubData))
                     }
                 }
